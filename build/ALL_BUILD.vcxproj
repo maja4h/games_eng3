@@ -178,6 +178,12 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{1200D37B-4B98-3B18-90F3-BD36F981E31E}</Project>
       <Name>PRACTICAL_1</Name>
     </ProjectReference>
+    <ProjectReference Include="C:\Users\40589426\Documents\GitHub\games_eng3\build\copy_resources.vcxproj">
+      <Project>{C199F274-1493-3127-ABC1-27DA65E8C2CC}</Project>
+      <Name>copy_resources</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
     <ProjectReference Include="C:\Users\40589426\Documents\GitHub\games_eng3\build\lib\sfml\src\SFML\Audio\sfml-audio.vcxproj">
       <Project>{B5AC53FF-84D7-31F2-A702-C3885AF98321}</Project>
       <Name>sfml-audio</Name>
