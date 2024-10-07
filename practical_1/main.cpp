@@ -19,6 +19,7 @@ const int gameWidth = 800;
 const int gameHeight = 600;
 const int paddleSpeed = 400.f;
 const float paddleOffsetWall = 10.f;
+//adding ball velocity
 Vector2f ballVelocity;
 bool isPlayer1Serving = false;
 const float initialVelocityX = 100.f;
@@ -74,9 +75,6 @@ void Update(RenderWindow& window) {
     static Clock clock;
     float dt = clock.restart().asSeconds();
 
-    //ball moving function
-    ball.move(ballVelocity * dt);
-
     // check and consume events
     Event event;
     while (window.pollEvent(event)) {
@@ -85,6 +83,9 @@ void Update(RenderWindow& window) {
             return;
         }
     }
+
+    //ball moving function
+    ball.move(ballVelocity * dt);
 
     // Quit Via ESC Key
     if (Keyboard::isKeyPressed(Keyboard::Escape)) {

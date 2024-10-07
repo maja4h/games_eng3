@@ -1,0 +1,54 @@
+#include <SFML/Graphics.hpp>
+//Space Invaders
+
+using namespace sf;
+using namespace std;
+
+//setting up variables
+const int gameWidth = 800;
+const int gameHeight = 600;
+
+void Load(){
+	
+}
+
+void Reset(){
+	
+}
+
+void Update(RenderWindow& window) {
+
+    //reset clock, recalculate deltatime
+    //static Clock clock;
+
+    // check and consume events
+    Event event;
+    while (window.pollEvent(event)) {
+        if (event.type == Event::Closed) {
+            window.close();
+            return;
+        }
+    }
+}
+
+void Render(RenderWindow& window) {
+
+    //draw everything
+    //window.draw(paddles[0]);
+    //window.draw(paddles[1]);
+    //window.draw(ball);
+}
+
+
+int main(){
+    RenderWindow window(VideoMode(gameWidth, gameHeight), "Space Invaders");
+    Load();
+    while (window.isOpen()) {
+        window.clear();
+        Update(window);
+        Render(window);
+        window.display();
+    }
+
+  return 0;
+}
