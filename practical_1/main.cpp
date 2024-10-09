@@ -36,7 +36,7 @@ void Load() {
     //set size and origin of paddles
     for (auto& p : paddles) {
         p.setSize(paddleSize);
-        p.setOrigin(paddleSize / 2.f);
+p.setOrigin(paddleSize / 2.f);
     }
 
     //set size and origin of ball
@@ -100,8 +100,15 @@ void Update(RenderWindow& window) {
     if (Keyboard::isKeyPressed(controls[1])) {
         direction++;
     }
+    if (Keyboard::isKeyPressed(controls[2])) {
+        direction--;
+    }
+    if (Keyboard::isKeyPressed(controls[3])) {
+        direction++;
+    }
 
     paddles[0].move(Vector2f(0.f, direction * paddleSpeed * dt));
+    paddles[1].move(Vector2f(0.f, direction * paddleSpeed * dt));
 
     //check ball collision
     const float bx = ball.getPosition().x;
@@ -117,6 +124,47 @@ void Update(RenderWindow& window) {
         ballVelocity.x *= velocityMulti;
         ballVelocity.y *= -velocityMulti;
         ball.move(Vector2f(0.f, 10.f));
+    }
+
+    else if (bx > gameWidth) {
+        //right wall
+        Reset();
+    }
+    else if (bx < 0) {
+        //left wall
+        Reset();
+    }
+
+    else if (
+        //ball is inline or behind paddle AND
+        bx < paddleSize.x + paddleOffsetWall &&
+        //ball is below top edge of paddle AND
+        by > paddles[0].getPosition().y - (paddleSize.y * 0.5) &&
+        //ball is above bottom edge of paddle
+        by < paddles[0].getPosition().y + (paddleSize.y * 0.5))
+        
+    {
+        //bounce off left paddlle
+        //reverse balls horizontal velocity (ball direction on x axis) so that it bounces off
+        ballVelocity.x = -ballVelocity.x;
+        //adjusting vertical velocity based on where the ball hits the paddle
+        //by - paddles[0].getPosition().y / (paddleSize.y * 0.5);
+        
+        //ballVelocity.y += *0.2f;
+        //bx = paddleSize.x + paddleOffsetWall;
+    }
+
+    else if (
+        //ball is inline or behind paddle AND
+        bx > gameWidth - (paddleSize.x + paddleOffsetWall) &&
+        //ball is below top edge of paddle AND
+        by > paddles[1].getPosition().y - (paddleSize.y * 0.5) &&
+        //ball is above bottom edge of paddle
+        by < paddles[1].getPosition().y + (paddleSize.y * 0.5))
+    {
+        //bounce off right paddle
+        //reverse balls horizontal velocity (ball direction on x axis) so that it bounces off
+        ballVelocity.x = -ballVelocity.x;
     }
 }
 
