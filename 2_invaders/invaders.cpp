@@ -2,7 +2,8 @@
 #include <iostream>
 //space invaders
 //player class
-//ship class from player
+//ship class from player - will contain all logic common 
+//for both player + invader
 //invader class
 
 using namespace sf;
