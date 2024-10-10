@@ -27,7 +27,7 @@ void Load() {
 //in charge of game logic, eg window control
 void Update(RenderWindow& window) {
 
-	//reset clock, recalculate deltatime
+	//reset clock, recalculate deltatim
 	//static Clock clock;
 	//float dt = clock.restart().asSeconds();
 
