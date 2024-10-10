@@ -6,9 +6,17 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="C:\Users\40589426\Documents\GitHub\games_eng3\2_invaders\ship.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
     <CustomBuild Include="C:\Users\40589426\Documents\GitHub\games_eng3\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{D6DB543E-1082-3A21-BBE4-9BE6CAA706F3}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source Files">
       <UniqueIdentifier>{5E2DAD09-6FF0-3EA2-8EE0-7C5E1CB2C1F8}</UniqueIdentifier>
     </Filter>

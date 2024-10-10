@@ -1,6 +1,9 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 //space invaders
+//player class
+//ship class from player
+//invader class
 
 using namespace sf;
 using namespace std;
