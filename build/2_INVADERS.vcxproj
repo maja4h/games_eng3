@@ -322,7 +322,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C:\Users\40589426\Documents\GitHub\games_eng3\2_invaders\invaders.cpp" />
+    <ClCompile Include="ship.cpp" />
     <ClInclude Include="C:\Users\40589426\Documents\GitHub\games_eng3\2_invaders\ship.h" />
+    <ClInclude Include="game.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\Users\40589426\Documents\GitHub\games_eng3\build\ZERO_CHECK.vcxproj">

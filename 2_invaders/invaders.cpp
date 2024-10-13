@@ -1,5 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include "ship.h"
 //space invaders
 //player class
 //ship class from player - will contain all logic common 
@@ -11,6 +12,7 @@ using namespace std;
 
 sf::Texture spritesheet;
 sf::Sprite invader;
+std::vector<Ship *> ships;
 
 //game window variables
 const int gameWidth = 800;

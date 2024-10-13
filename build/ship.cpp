@@ -1,8 +1,12 @@
 #include "ship.h"
+#include "game.h"
+#include <SFML/Graphics.hpp>
 //ship.cpp
 
 using namespace sf;
 using namespace std;
+
+sf::Texture spritesheet;
 
 Ship::Ship() {};
 
