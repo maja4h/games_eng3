@@ -1,6 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include "ship.h"
+#include "game.h"
 //space invaders
 //player class
 //ship class from player - will contain all logic common 
@@ -10,13 +11,13 @@
 using namespace sf;
 using namespace std;
 
-sf::Texture spritesheet;
+//sf::Texture spritesheet;
 sf::Sprite invader;
 std::vector<Ship *> ships;
 
 //game window variables
-const int gameWidth = 800;
-const int gameHeight = 600;
+//const int gameWidth = 800;
+//const int gameHeight = 600;
 
 void Load() {
 	//getting spritesheet
@@ -28,7 +29,10 @@ void Load() {
 	//cuts out the bit we want from the spritsheet (left,top) (width height)
 	invader.setTextureRect(IntRect(Vector2i(0, 0), Vector2i(32, 32)));
 
+	Invader* inv = new Invader(sf::IntRect(Vector2i(0, 0), Vector2i(32, 32)), { 100,100 });
+	ships.push_back(inv);
 }
+
 
 //in charge of game logic, eg window control
 void Update(RenderWindow& window) {

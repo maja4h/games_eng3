@@ -4,15 +4,15 @@
     <ClCompile Include="C:\Users\40589426\Documents\GitHub\games_eng3\2_invaders\invaders.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ship.cpp">
+    <ClCompile Include="C:\Users\40589426\Documents\GitHub\games_eng3\2_invaders\ship.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\40589426\Documents\GitHub\games_eng3\2_invaders\ship.h">
+    <ClInclude Include="C:\Users\40589426\Documents\GitHub\games_eng3\2_invaders\game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="game.h">
+    <ClInclude Include="C:\Users\40589426\Documents\GitHub\games_eng3\2_invaders\ship.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
