@@ -38,8 +38,8 @@ void Load() {
 void Update(RenderWindow& window) {
 
 	//reset clock, recalculate deltatim
-	//static Clock clock;
-	//float dt = clock.restart().asSeconds();
+	static Clock clock;
+	float dt = clock.restart().asSeconds();
 
 	// check and consume events
 	Event event;
@@ -53,11 +53,20 @@ void Update(RenderWindow& window) {
 	if (Keyboard::isKeyPressed(Keyboard::Escape)) {
 		window.close();
 	}
+
+	for (auto& s : ships) {
+		s->Update(dt);
+	}
 }
 
 void Render(RenderWindow& window) {
-	//drawing/rendering the invader sprte from the spritesheet
+	//drawing/rendering the invader sprite from the spritesheet
 	window.draw(invader);
+
+	//rendering ship the ship sprites
+	for (const auto s : ships) {
+		window.draw(*s);
+	}
 }
 
 int main() {
